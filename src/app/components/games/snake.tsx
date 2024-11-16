@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QuestionBlock from "../question_block";
 import { Button } from "~/components/ui/button";
-import { FakeContinue, FakeHeader, FakeMotivation } from "../fake_page";
+import { FakeHeader } from "../fake_page";
 
 export default function SnakeBoardSolo() {
   const board_dimensions: [number, number] = [100, 50];
@@ -126,7 +126,9 @@ export default function SnakeBoardSolo() {
       if (!is_break) {
         let kill_tail = true;
         if (
+          // @ts-expect-error umm
           new_position[0] == food_coord[1] &&
+          // @ts-expect-error umm
           new_position[1] == food_coord[0]
         ) {
           set_food_coord(generate_random_inactive_coord());
@@ -218,7 +220,9 @@ export default function SnakeBoardSolo() {
                   {line.map((cell, index_x) => (
                     <div key={index_x} className="h-2 w-2 text-xs">
                       {cell.length == 0 &&
+                      // @ts-expect-error umm
                       index_x == food_coord[0] &&
+                      // @ts-expect-error umm
                       index_y == food_coord[1]
                         ? "0"
                         : cell}
