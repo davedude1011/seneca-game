@@ -34,7 +34,7 @@ export default function Page() {
       <div className="flex flex-grow flex-col">
         <TopBar {...{ is_hidden, set_is_hidden }} />
         <div className="flex flex-grow flex-col items-center gap-6 p-12">
-          {is_hidden || !active_element ? (
+          {(is_hidden ?? !active_element) ? (
             <>
               <FakePage />
             </>
