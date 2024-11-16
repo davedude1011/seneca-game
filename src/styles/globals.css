@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 33% 15%; /* Dark blue background */
+    --foreground: 220 30% 85%; /* Light foreground text */
+    --card: 218 26% 21%; /* Slightly lighter dark blue for cards */
+    --card-foreground: 218 20% 25%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 220 30% 85%;
+    --primary: 215 100% 73%; /* Accent color for active states, closer to blue */
+    --primary-foreground: 212 100% 59%;
+    --secondary: 220 10% 20%; /* Muted dark blue for secondary elements */
+    --secondary-foreground: 220 30% 85%;
+    --muted: 220 10% 20%; /* Muted background elements */
+    --muted-foreground: 220 15% 60%; /* Lightened text on muted backgrounds */
+    --accent: 220 10% 20%;
+    --accent-foreground: 220 30% 85%;
+    --destructive: 0 60% 45%; /* Destructive actions (e.g., red) */
+    --destructive-foreground: 220 30% 95%;
+    --border: 220 10% 25%; /* Light borders */
+    --input: 220 10% 25%;
+    --ring: 220 30% 85%; /* Ring effect around focus elements */
+    --chart-1: 220 50% 55%; /* Slightly vibrant blue for charts */
+    --chart-2: 180 40% 40%; /* Greenish-blue chart color */
+    --chart-3: 200 30% 30%; /* Darker blue for diversity */
+    --chart-4: 240 20% 40%; /* Slightly purple */
+    --chart-5: 200 50% 50%; /* Brighter chart color */
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 220 15% 10%;
+    --foreground: 220 30% 85%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 30% 85%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 220 30% 85%;
+    --primary: 220 40% 45%;
+    --primary-foreground: 220 30% 95%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: 220 30% 85%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 15% 60%;
+    --accent: 220 10% 20%;
+    --accent-foreground: 220 30% 85%;
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 220 30% 95%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 220 30% 85%;
+    --chart-1: 220 50% 55%;
+    --chart-2: 180 40% 40%;
+    --chart-3: 200 30% 30%;
+    --chart-4: 240 20% 40%;
+    --chart-5: 200 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
